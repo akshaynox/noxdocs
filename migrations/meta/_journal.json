@@ -8,6 +8,20 @@
       "when": 1702741272335,
       "tag": "0000_absurd_mentallo",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1704102298022,
+      "tag": "0001_abnormal_wonder_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1704112305804,
+      "tag": "0002_lowly_firelord",
+      "breakpoints": true
     }
   ]
 }

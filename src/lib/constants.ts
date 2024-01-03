@@ -16,97 +16,97 @@ export const USERS = [
   {
     name: "Alice",
     message:
-      "Cypress has been a game-changer for our team. With its reliable end-to-end testing, we catch bugs early, leading to faster development cycles and improved collaboration.",
+      "NoxDocs has been a game-changer for our team. With its reliable end-to-end testing, we catch bugs early, leading to faster development cycles and improved collaboration.",
   },
   {
     name: "Bob",
     message:
-      "I used to spend hours debugging frontend issues, but Cypress simplified everything. Now, I'm more productive, and my colleagues can trust our code thanks to Cypress.",
+      "I used to spend hours debugging frontend issues, but NoxDocs simplified everything. Now, I'm more productive, and my colleagues can trust our code thanks to NoxDocs.",
   },
   {
     name: "Charlie",
     message:
-      "Cypress has transformed the way we work. Our QA and development teams are on the same page, and our productivity has skyrocketed. It's a must-have tool.",
+      "NoxDocs has transformed the way we work. Our QA and development teams are on the same page, and our productivity has skyrocketed. It's a must-have tool.",
   },
   {
     name: "David",
     message:
-      "I was skeptical at first, but Cypress exceeded my expectations. Our project timelines have improved, and collaboration between teams is seamless.",
+      "I was skeptical at first, but NoxDocs exceeded my expectations. Our project timelines have improved, and collaboration between teams is seamless.",
   },
   {
     name: "Ella",
     message:
-      "Cypress made writing and running tests a breeze. Our team's productivity has never been higher, and we're delivering more reliable software.",
+      "NoxDocs made writing and running tests a breeze. Our team's productivity has never been higher, and we're delivering more reliable software.",
   },
   {
     name: "Frank",
     message:
-      "Thanks to Cypress, we've eliminated testing bottlenecks. Our developers and testers collaborate effortlessly, resulting in quicker releases.",
+      "Thanks to NoxDocs, we've eliminated testing bottlenecks. Our developers and testers collaborate effortlessly, resulting in quicker releases.",
   },
   {
     name: "Grace",
     message:
-      "Cypress has improved our development process significantly. We now have more time for innovation, and our products are of higher quality.",
+      "NoxDocs has improved our development process significantly. We now have more time for innovation, and our products are of higher quality.",
   },
   {
     name: "Hank",
     message:
-      "Cypress's user-friendly interface made it easy for our non-technical team members to contribute to testing. Our workflow is much more efficient now.",
+      "NoxDocs's user-friendly interface made it easy for our non-technical team members to contribute to testing. Our workflow is much more efficient now.",
   },
   {
     name: "Ivy",
     message:
-      "Our team's collaboration improved immensely with Cypress. We catch issues early, leading to less friction and quicker feature deployments.",
+      "Our team's collaboration improved immensely with NoxDocs. We catch issues early, leading to less friction and quicker feature deployments.",
   },
   {
     name: "Jack",
     message:
-      "Cypress's robust testing capabilities have elevated our development standards. We work more harmoniously, and our releases are more reliable.",
+      "NoxDocs's robust testing capabilities have elevated our development standards. We work more harmoniously, and our releases are more reliable.",
   },
   {
     name: "Katherine",
     message:
-      "Cypress is a lifesaver for our cross-functional teams. We're more productive, and there's a shared sense of responsibility for product quality.",
+      "NoxDocs is a lifesaver for our cross-functional teams. We're more productive, and there's a shared sense of responsibility for product quality.",
   },
   {
     name: "Liam",
     message:
-      "Cypress has helped us maintain high standards of quality. Our team's collaboration has improved, resulting in faster development cycles.",
+      "NoxDocs has helped us maintain high standards of quality. Our team's collaboration has improved, resulting in faster development cycles.",
   },
   {
     name: "Mia",
     message:
-      "Cypress is a powerful tool that improved our productivity and collaboration. It's now an integral part of our development process.",
+      "NoxDocs is a powerful tool that improved our productivity and collaboration. It's now an integral part of our development process.",
   },
   {
     name: "Nathan",
     message:
-      "Cypress's user-friendly interface and detailed reporting have made testing a breeze. Our team's productivity is at an all-time high.",
+      "NoxDocs's user-friendly interface and detailed reporting have made testing a breeze. Our team's productivity is at an all-time high.",
   },
   {
     name: "Olivia",
     message:
-      "We saw immediate benefits in terms of productivity and collaboration after adopting Cypress. It's an essential tool for our development workflow.",
+      "We saw immediate benefits in terms of productivity and collaboration after adopting NoxDocs. It's an essential tool for our development workflow.",
   },
   {
     name: "Paul",
     message:
-      "Cypress has streamlined our testing process and brought our teams closer. We're more efficient and deliver better results.",
+      "NoxDocs has streamlined our testing process and brought our teams closer. We're more efficient and deliver better results.",
   },
   {
     name: "Quinn",
     message:
-      "Cypress has been a game-changer for us. Our productivity and collaboration have improved significantly, leading to better software.",
+      "NoxDocs has been a game-changer for us. Our productivity and collaboration have improved significantly, leading to better software.",
   },
   {
     name: "Rachel",
     message:
-      "Thanks to Cypress, our testing process is now a seamless part of our development cycle. Our teams collaborate effortlessly.",
+      "Thanks to NoxDocs, our testing process is now a seamless part of our development cycle. Our teams collaborate effortlessly.",
   },
   {
     name: "Sam",
     message:
-      "Cypress is a fantastic tool that has revolutionized our workflow. Our productivity and collaboration have reached new heights.",
+      "NoxDocs is a fantastic tool that has revolutionized our workflow. Our productivity and collaboration have reached new heights.",
   },
 ];
 
@@ -116,7 +116,7 @@ export const PRICING_CARDS = [
     price: "0",
     description: "Limited block trials  for teams",
     highlightFeature: "",
-    freatures: [
+    features: [
       "Unlimited blocks for teams",
       "Unlimited file uploads",
       "30 day page history",
@@ -128,7 +128,7 @@ export const PRICING_CARDS = [
     price: "12.99",
     description: "Billed annually. $17 billed monthly",
     highlightFeature: "Everything in free +",
-    freatures: [
+    features: [
       "Unlimited blocks for teams",
       "Unlimited file uploads",
       "1 year day page history",

@@ -15,8 +15,12 @@
     "up": "drizzle-kit up:pg"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.3",
     "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "@supabase/auth-helpers-nextjs": "^0.8.7",
+    "@supabase/supabase-js": "^2.39.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "dotenv": "^16.3.1",
@@ -27,8 +31,10 @@
     "postgres": "^3.4.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.49.2",
     "tailwind-merge": "^2.2.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20",

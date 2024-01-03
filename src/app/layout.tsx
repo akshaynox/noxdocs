@@ -3,8 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import db from "@/lib/supabase/db";
 import { ThemeProvider } from "@/lib/providers/next-theme-provider";
+import { DM_Sans } from "next/font/google";
+import { twMerge } from "tailwind-merge";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "NoxDocs",
@@ -33,7 +35,7 @@ export default function RootLayout({
   // console.log(db);
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={twMerge("bg-background", inter.className)}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>

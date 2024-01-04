@@ -2,7 +2,6 @@ import React from "react";
 import TitleSection from "@/components/landing-page/title-section";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Banner from "../../../public/appBanner.png";
 import Calendar from "../../../public/cal.png";
 import Diamond from "../../../public/icons/diamond.svg";
 import Check from "../../../public/icons/check.svg";
@@ -54,31 +53,6 @@ const HomePage = () => {
             >
               Get NoxDocs Free
             </Button>
-          </div>
-          <div
-            className="
-              sm:w-full
-              w-[750px]
-              flex
-              justify-center
-              items-center
-              relative
-              sm:ml-0
-              ml-[-50px]
-            "
-          >
-            <Image src={Banner} alt="Application Banner" />
-            <div
-              className="bottom-0
-            top-[50%]
-            bg-gradient-to-t
-            dark:from-background
-            left-0
-            right-0
-            absolute
-            z-10
-          "
-            ></div>
           </div>
         </div>
       </section>

@@ -1,6 +1,13 @@
 "use client";
 
-import { Form } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
 import { FormSchema } from "@/lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import clsx from "clsx";
@@ -9,6 +16,14 @@ import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { actionSignupUser } from "@/lib/server-actions/auth-actions";
+import { Input } from "@/components/ui/input";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "../../../../public/noxdocslogo.svg";
+import { Button } from "@/components/ui/button";
+import Loader from "@/components/global/loader";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { MailCheck } from "lucide-react";
 
 const SignUpFormSchema = z
   .object({
@@ -77,7 +92,101 @@ const Signup = () => {
         space-y-6 flex
         flex-col
         "
-      ></form>
+      >
+        <Link
+          href="/"
+          className="
+          w-full
+          flex
+          justify-left
+          items-center"
+        >
+          <Image src={Logo} alt="noxdocs Logo" width={50} height={50} />
+          <span
+            className="font-semibold
+          dark:text-white text-4xl first-letter:ml-2"
+          >
+            noxdocs
+          </span>
+        </Link>
+        <FormDescription
+          className="
+        text-foreground/60"
+        >
+          An all-In-One Collaboration and Productivity Platform
+        </FormDescription>
+        {!confirmation && !codeExchangeError && (
+          <>
+            <FormField
+              disabled={isLoading}
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input type="email" placeholder="Email" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              disabled={isLoading}
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input type="password" placeholder="Password" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              disabled={isLoading}
+              control={form.control}
+              name="confirmPassword"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      type="password"
+                      placeholder="Confirm Password"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button type="submit" className="w-full p-6" disabled={isLoading}>
+              {!isLoading ? "Create Account" : <Loader />}
+            </Button>
+          </>
+        )}
+
+        {submitError && <FormMessage>{submitError}</FormMessage>}
+        <span className="self-container">
+          Already have an account?{" "}
+          <Link href="/login" className="text-primary">
+            Login
+          </Link>
+        </span>
+        {(confirmation || codeExchangeError) && (
+          <>
+            <Alert className={confirmationAndErrorStyles}>
+              {!codeExchangeError && <MailCheck className="h-4 w-4" />}
+              <AlertTitle>
+                {codeExchangeError ? "Invalid Link" : "Check your email."}
+              </AlertTitle>
+              <AlertDescription>
+                {codeExchangeError || "An email confirmation has been sent."}
+              </AlertDescription>
+            </Alert>
+          </>
+        )}
+      </form>
     </Form>
   );
 };

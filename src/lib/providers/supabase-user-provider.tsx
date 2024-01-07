@@ -35,7 +35,6 @@ export const SupabaseUserProvider: React.FC<SupabaseUserProviderProps> = ({
   const supabase = createClientComponentClient();
 
   //Fetch the user details
-  //subscrip
   useEffect(() => {
     const getUser = async () => {
       const {

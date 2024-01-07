@@ -10,6 +10,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import React from "react";
 import { twMerge } from "tailwind-merge";
+import WorkspaceDropdown from "./workspace-dropdown";
 
 interface SidebarProps {
   params: { workspaceId: string };
@@ -51,7 +52,18 @@ const Sidebar: React.FC<SidebarProps> = async ({ params, className }) => {
         className
       )}
     >
-      <div></div>
+      <div>
+        <WorkspaceDropdown
+          privateWorkspaces={privateWorkspaces}
+          collaboratingWorkspaces={collaboratingWorkspaces}
+          sharedWorkspaces={sharedWorkspaces}
+          defaultValue={[
+            ...privateWorkspaces,
+            ...collaboratingWorkspaces,
+            ...sharedWorkspaces,
+          ].find((workspace) => workspace.id === params.workspaceId)}
+        />
+      </div>
     </aside>
   );
 };

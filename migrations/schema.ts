@@ -108,7 +108,6 @@ export const prices = pgTable("prices", {
   productId: text("product_id").references(() => products.id),
   active: boolean("active"),
   description: text("description"),
-  // You can use { mode: "bigint" } if numbers are exceeding js number limitations
   unitAmount: bigint("unit_amount", { mode: "number" }),
   currency: text("currency"),
   type: pricingType("type"),

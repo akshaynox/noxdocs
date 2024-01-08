@@ -331,7 +331,7 @@ const AppStateProvider: React.FC<AppStateProviderProps> = ({ children }) => {
       if (!data) return;
       dispatch({
         type: "SET_FILES",
-        payload: { workspaceId, files: data, folderId },
+        payload: { workspaceId, files: data as File[] | [], folderId },
       });
     };
     fetchFiles();

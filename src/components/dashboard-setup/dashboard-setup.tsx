@@ -58,7 +58,7 @@ const DashboardSetup: React.FC<DashboardSetupProps> = ({
     const file = value.logo?.[0];
     let filePath = null;
     const workspaceUUID = v4();
-    console.log(file);
+    // console.log(file);
 
     if (file) {
       try {

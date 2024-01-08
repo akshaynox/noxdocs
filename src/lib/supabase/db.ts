@@ -12,17 +12,17 @@ if (!process.env.DATABASE_URL) {
 
 const client = postgres(process.env.DATABASE_URL as string, { max: 1 });
 const db = drizzle(client, { schema });
-console.log("gettin");
 
-const migrateDb = async () => {
-  try {
-    console.log("🟠 Migrating client");
-    await migrate(db, { migrationsFolder: "migrations" });
-    console.log("🟢 Successfully Migrated");
-  } catch (error) {
-    console.log("🔴 Error Migrating client", error);
-  }
-};
-migrateDb();
+// uncomment below when migrating schema to supabase
+// const migrateDb = async () => {
+//   try {
+//     console.log("🟠 Migrating client");
+//     await migrate(db, { migrationsFolder: "migrations" });
+//     console.log("🟢 Successfully Migrated");
+//   } catch (error) {
+//     console.log("🔴 Error Migrating client", error);
+//   }
+// };
+// migrateDb();
 
 export default db;

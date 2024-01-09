@@ -189,3 +189,39 @@ export const createFolder = async (folder: Folder) => {
     return { data: null, error: "Error" };
   }
 };
+
+export const updateFolder = async (
+  folder: Partial<Folder>,
+  folderId: string
+) => {
+  try {
+    await db.update(folders).set(folder).where(eq(folders.id, folderId));
+    return { data: null, error: null };
+  } catch (error) {
+    console.log(error);
+    return { data: null, error: "Error" };
+  }
+};
+
+export const updateFile = async (file: any, fileId: string) => {
+  try {
+    const response = await db
+      .update(files)
+      .set(file as { inTrash: string })
+      .where(eq(files.id, fileId));
+    return { data: null, error: null };
+  } catch (error) {
+    console.log(error);
+    return { data: null, error: "Error" };
+  }
+};
+
+export const createFile = async (file: File) => {
+  try {
+    await db.insert(files).values(file as any);
+    return { data: null, error: null };
+  } catch (error) {
+    console.log(error);
+    return { data: null, error: "Error" };
+  }
+};

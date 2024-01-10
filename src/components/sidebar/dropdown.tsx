@@ -263,7 +263,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   const addNewFile = async () => {
     if (!workspaceId) return;
-    const newFile: any = {
+    const newFile = {
       folderId: id,
       data: null,
       createdAt: new Date().toISOString(),
@@ -331,7 +331,9 @@ const Dropdown: React.FC<DropdownProps> = ({
             />
           </div>
           <div className={hoverStyles}>
-            <TooltipComponent message="Delete Folder">
+            <TooltipComponent
+              message={`Delete ${listType === "folder" ? "Folder" : "File"}`}
+            >
               <Trash
                 onClick={moveToTrash}
                 size={15}

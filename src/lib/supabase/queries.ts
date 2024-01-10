@@ -10,7 +10,7 @@ import {
 import { validate } from "uuid";
 import { eq, and, notExists, ilike } from "drizzle-orm";
 import db from "./db";
-import { Folder, Subscription, User, workspace } from "./supabase.types";
+import { Folder, Subscription, User, workspace, File } from "./supabase.types";
 
 export const getUserSubscriptionStatus = async (userId: string) => {
   try {
@@ -203,7 +203,7 @@ export const updateFolder = async (
   }
 };
 
-export const updateFile = async (file: any, fileId: string) => {
+export const updateFile = async (file: Partial<File>, fileId: string) => {
   try {
     const response = await db
       .update(files)
@@ -218,7 +218,7 @@ export const updateFile = async (file: any, fileId: string) => {
 
 export const createFile = async (file: File) => {
   try {
-    await db.insert(files).values(file as any);
+    await db.insert(files).values(file);
     return { data: null, error: null };
   } catch (error) {
     console.log(error);

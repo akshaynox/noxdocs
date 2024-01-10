@@ -4,6 +4,8 @@ import { twMerge } from "tailwind-merge";
 import HomeIcon from "../icons/HomeIcon";
 import SettingsIcon from "../icons/SettingsIcon";
 import TrashIcon from "../icons/TrashIcon";
+import Trash from "../trash/trash";
+import Settings from "../settings/settings";
 
 interface NativeNavigationProps {
   myWorkspaceId: string;
@@ -27,7 +29,7 @@ const NativeNavigation: React.FC<NativeNavigationProps> = ({
           </Link>
         </li>
 
-        {/* <Settings>
+        <Settings>
           <li className="group/native flex text-Neutrals/neutrals-7 transition-all gap-2 cursor-pointer">
             <SettingsIcon />
             <span>Settings</span>
@@ -39,7 +41,7 @@ const NativeNavigation: React.FC<NativeNavigationProps> = ({
             <TrashIcon />
             <span>Trash</span>
           </li>
-        </Trash> */}
+        </Trash>
       </ul>
     </nav>
   );

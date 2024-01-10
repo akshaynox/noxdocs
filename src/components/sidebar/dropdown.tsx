@@ -1,9 +1,14 @@
+"use client";
+
 import { useAppState } from "@/lib/providers/state-provider";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
 import React, { useMemo, useState } from "react";
-import { AccordionContent, AccordionItem } from "../ui/accordion";
-import { AccordionTrigger } from "@radix-ui/react-accordion";
+import {
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
 import clsx from "clsx";
 import EmojiPicker from "../global/emoji-picker";
 import { useToast } from "../ui/use-toast";

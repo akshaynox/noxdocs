@@ -11,7 +11,7 @@ import {
   updateFile,
   updateFolder,
 } from "@/lib/supabase/queries";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 interface QuillEditorProps {
   dirDetails: File | Folder | workspace;
@@ -47,6 +47,7 @@ const QuillEditor: React.FC<QuillEditorProps> = ({
   const [quill, setQuill] = useState<any>(null);
   const { state, workspaceId, folderId, dispatch } = useAppState();
   const router = useRouter();
+  const pathname = usePathname();
 
   const details = useMemo(() => {
     let selectedDir;
@@ -80,6 +81,10 @@ const QuillEditor: React.FC<QuillEditorProps> = ({
       bannerUrl: dirDetails.bannerUrl,
     } as workspace | Folder | File;
   }, [state, workspaceId, folderId]);
+
+  const breadCrumbs = useMemo(() => {
+    return "";
+  }, [state]);
 
   const wrapperRef = useCallback(async (wrapper: any) => {
     if (typeof window !== undefined) {
@@ -175,6 +180,12 @@ const QuillEditor: React.FC<QuillEditorProps> = ({
             <span className="text-sm text-white">{details.inTrash}</span>
           </article>
         )}
+        <div
+          className="flex flex-col-reverse sm:flex-row sm:justify-between justify-center 
+            sm:items-center sm:p-2 p-8"
+        >
+          <div>{breadCrumbs}</div>
+        </div>
       </div>
       <div className="flex justify-center items-center flex-col mt-2 relative">
         <div id="container" className="max-w-800" ref={wrapperRef}>

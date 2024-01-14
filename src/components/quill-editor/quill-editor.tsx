@@ -348,21 +348,21 @@ const QuillEditor: React.FC<QuillEditorProps> = ({
               </Badge>
             )}
           </div>
-          {details.bannerUrl && (
-            <div className="relative w-full h-[200px]">
-              <Image
-                src={
-                  supabase.storage
-                    .from("file-banners")
-                    .getPublicUrl(details.bannerUrl).data.publicUrl
-                }
-                fill
-                className="w-full md:h-48 h-20 object-cover"
-                alt="Banner Image"
-              />
-            </div>
-          )}
         </div>
+        {details.bannerUrl && (
+          <div className="relative w-full h-[200px]">
+            <Image
+              src={
+                supabase.storage
+                  .from("file-banners")
+                  .getPublicUrl(details.bannerUrl).data.publicUrl
+              }
+              fill
+              className="w-full md:h-48 h-20 object-cover"
+              alt="Banner Image"
+            />
+          </div>
+        )}
       </div>
       <div className="flex justify-center items-center flex-col mt-2 relative">
         <div className="w-full self-center max-w-[800px] flex flex-col px-7 lg:my-8">

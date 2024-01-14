@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     icon: [
       {
         media: "(prefers-color-scheme: light)",
-        url: "/icons/logo.svg",
-        href: "/icons/logo.svg",
+        url: "/noxdocslogo.svg",
+        href: "/noxdocslogo.svg",
       },
       {
         media: "(prefers-color-scheme: dark)",
-        url: "/icons/logo-dark.svg",
-        href: "/icons/logo-dark.svg",
+        url: "/noxdocslogo.svg",
+        href: "/noxdocslogo.svg",
       },
     ],
   },

@@ -164,7 +164,6 @@ const SettingsForm = () => {
     } else setPermissions(val);
   };
 
-  //CHALLENGE fetching avatar details
   //WIP Payment Portal redirect
 
   useEffect(() => {
@@ -289,14 +288,8 @@ const SettingsForm = () => {
                           <AvatarFallback>PJ</AvatarFallback>
                         </Avatar>
                         <div
-                          className="text-sm 
-                          gap-2
-                          text-muted-foreground
-                          overflow-hidden
-                          overflow-ellipsis
-                          sm:w-[300px]
-                          w-[140px]
-                        "
+                          className="text-sm gap-2 text-muted-foreground overflow-hidden
+                           overflow-ellipsis sm:w-[300px] w-[140px]"
                         >
                           {c.email}
                         </div>

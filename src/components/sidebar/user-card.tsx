@@ -4,7 +4,7 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import db from "@/lib/supabase/db";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import CypressProfileIcon from "../icons/ProfileIcon";
+import ProfileIcon from "../icons/ProfileIcon";
 import ModeToggle from "../global/mode-toggle";
 import { LogOut } from "lucide-react";
 import LogoutButton from "../global/logout-button";
@@ -52,7 +52,7 @@ const UserCard: React.FC<UserCardProps> = async ({ subscription }) => {
         <Avatar>
           <AvatarImage src={profile.avatarUrl} />
           <AvatarFallback>
-            <CypressProfileIcon />
+            <ProfileIcon />
           </AvatarFallback>
         </Avatar>
         <div className="flex flex-col">

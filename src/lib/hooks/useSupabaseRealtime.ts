@@ -1,13 +1,12 @@
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useEffect } from "react";
 import { useAppState } from "../providers/state-provider";
-
 import { File } from "../supabase/supabase.types";
 import { useRouter } from "next/navigation";
 
 const useSupabaseRealtime = () => {
   const supabase = createClientComponentClient();
-  const { dispatch, state, workspaceId: selectedWorskpace } = useAppState();
+  const { dispatch, state, workspaceId: selectedWorkspace } = useAppState();
   const router = useRouter();
   useEffect(() => {
     const channel = supabase
@@ -29,7 +28,7 @@ const useSupabaseRealtime = () => {
                 ?.folders.find((folder) => folder.id === folderId)
                 ?.files.find((file) => file.id === fileId)
             ) {
-              const newFile = {
+              const newFile: File = {
                 id: payload.new.id,
                 workspaceId: payload.new.workspace_id,
                 folderId: payload.new.folder_id,
@@ -99,7 +98,7 @@ const useSupabaseRealtime = () => {
     return () => {
       channel.unsubscribe();
     };
-  }, [supabase, state, selectedWorskpace]);
+  }, [supabase, state, selectedWorkspace]);
 
   return null;
 };

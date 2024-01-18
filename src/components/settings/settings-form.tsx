@@ -72,8 +72,6 @@ const SettingsForm = () => {
   const [uploadingLogo, setUploadingLogo] = useState(false);
   const [loadingPortal, setLoadingPortal] = useState(false);
 
-  //WIP PAYMENT PORTAL
-
   const redirectToCustomerPortal = async () => {
     setLoadingPortal(true);
     try {

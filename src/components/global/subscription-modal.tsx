@@ -13,6 +13,7 @@ import {
 } from "../ui/dialog";
 import { Button } from "../ui/button";
 import Loader from "./loader";
+import { getStripe } from "@/lib/stripe/stripeClient";
 
 interface SubscriptionModalProps {
   products: ProductWithPrice[];
@@ -43,9 +44,11 @@ const SubscriptionModal: React.FC<SubscriptionModalProps> = ({ products }) => {
         data: { price },
       });
 
-      //add stripe stuff here
+      console.log("Getting Checkout for stripe");
+      const stripe = await getStripe();
+      stripe?.redirectToCheckout({ sessionId });
     } catch (error) {
-      toast({ title: "Oppse! Something went wrong.", variant: "destructive" });
+      toast({ title: "Oops! Something went wrong.", variant: "destructive" });
     } finally {
       setIsLoading(false);
     }
